@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    background-color: royalblue;
+}
+
+div {
+    display: flex;
+    border-radius: 10px;
+    transform: rotateX(10deg);
+}
