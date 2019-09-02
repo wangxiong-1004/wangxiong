@@ -32,6 +32,14 @@ const mutations = {
 
     setLogs(state) {
         state.log = {};
+    },
+
+    logSet() {
+        console.log('logSet');
+    },
+
+    logGetter() {
+        console.log('logGetter');
     }
 };
 
@@ -55,6 +63,10 @@ const actions = {
         // 向根提交commit/actions
         dispatch('someOtherAction', null, { root: true });
         commit('someOtherCommit', null, { root: true });
+    },
+
+    incrementSync() {
+        console.log('alias increment');
     }
 };
 

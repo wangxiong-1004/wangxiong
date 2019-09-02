@@ -1,7 +1,7 @@
 <template>
     <div class="home">
         <img alt="Vue logo" :src="logoImage">
-        <HelloWorld msg="Welcome to Your Vue.js App"/>
+        <HelloWorld msg="Welcome to Your Vue.js App"  v-show-hide="true" />
         ---
         <pre>{{ log }}</pre>
         <button @click="setLogs">setLog</button>
@@ -11,6 +11,9 @@
             user_name: {{ userName }}
             <input type="text" v-model="userName">
         </div>
+
+        <router-link :to="{ name: 'router', params: { id: 1 } }">router1</router-link>
+        <router-link :to="{ name: 'router', params: { id: 2 } }">router2</router-link>
     </div>
 </template>
 

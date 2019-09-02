@@ -4,7 +4,7 @@ let baseURL;
 if (devMode) {
     baseURL = 'https://www.dolabank/club';
 } else {
-    baseURL = 'https://www.dolabank.com/apigetway/';
+    baseURL = 'https://www.dolabank.com/apigateway';
 }
 
 export default {

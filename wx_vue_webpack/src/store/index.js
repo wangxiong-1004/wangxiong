@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import createPersistedPlugin from './plugins/createPersistedPlugin';
 import state from './state';
 import getters from './getters';
 import mutations from './mutations';
@@ -16,7 +17,10 @@ const store = new Vuex.Store({
     actions,
     modules: {
         logs
-    }
+    },
+    plugins: [
+        createPersistedPlugin()
+    ]
 });
 
 if (module.hot) {

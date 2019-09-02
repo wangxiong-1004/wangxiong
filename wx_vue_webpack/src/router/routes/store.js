@@ -1,7 +1,13 @@
 const store = [
     {
-        path: '/store',
-        component: () => import(/* webpackChunkName: "index" */ '@/views/State.vue')
+        path: '/state',
+        component: () => import(/* webpackChunkName: "vuex" */ '@/views/vuex/State.vue')
+    }, {
+        path: '/mutations',
+        component: () => import(/* webpackChunkName: "vuex" */ '@/views/vuex/Mutations.vue')
+    }, {
+        path: '/actions',
+        component: () => import(/* webpackChunkName: "vuex" */ '@/views/vuex/Actions.vue')
     }
 ];
 
