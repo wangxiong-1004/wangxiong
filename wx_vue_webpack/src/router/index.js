@@ -9,7 +9,19 @@ const router = new VueRouter({
     // mode: 'history', // history | hash
     routes,
     linkActiveClass: 'is-active',
-    linkExactActiveClass: 'is-active' // 精确激活的默认的 class
+    linkExactActiveClass: 'is-active', // 精确激活的默认的 class
+    scrollBehavior(to, from, savedPosition) {
+        // 滚动到上次的位置
+        if (savedPosition) {
+            return savedPosition;
+        }
+
+        // 滚动到顶部
+        return {
+            x: 0,
+            y: 0
+        };
+    }
     // base: '/webapp/' // 应用的基路径
 });
 

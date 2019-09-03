@@ -5,7 +5,7 @@
             |
             <router-link to="/about">About</router-link>
         </div>
-<!--        页面缓存 -->
+        <!-- 页面缓存 -->
         <keep-alive>
             <router-view/>
         </keep-alive>

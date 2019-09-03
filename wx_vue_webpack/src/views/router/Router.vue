@@ -39,7 +39,7 @@ export default {
         console.log(this.id);
     },
 
-    // 导航前守卫
+    // 进入同路由的时候调用
     beforeRouteUpdate(to, from, next) {
         console.log(to);
         console.log(from);
