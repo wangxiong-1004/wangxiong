@@ -33,6 +33,10 @@ const routes = [
         name: 'css',
         component: () => import(/* webpackChunkName: 'css' */ '@/views/Css.vue')
     }, {
+        path: '/star',
+        name: 'star',
+        component: () => import(/* webpackChunkName: 'css' */ '@/views/StarExample.vue')
+    }, {
         path: '/',
         redirect: () => '/home'
     }
