@@ -1,11 +1,13 @@
 import store from './store';
 import element from './element';
 import router from './router';
+import scroll from './scroll';
 
 const routes = [
     ...store,
     ...element,
     ...router,
+    ...scroll,
     {
         path: '/home',
         name: 'home',
