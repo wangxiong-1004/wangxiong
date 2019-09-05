@@ -9,7 +9,8 @@
                 </ul>
                 <div class="pullup-wrapper">
                     <div v-if="!isPullUpLoad" class="before-trigger">
-                        <span class="pullup-txt">上拉加载更多...</span>
+                        <span v-if="!isDone" class="pullup-txt">上拉加载更多...</span>
+                        <span v-else class="pullup-txt">已经到底啦！只能帮你到这里了！</span>
                     </div>
                     <div v-else class="after-trigger">
                         <span class="pullup-txt">加载中...</span>
@@ -33,7 +34,8 @@ export default {
     data() {
         return {
             isPullUpLoad: false,
-            data: 30
+            data: 30,
+            isDone: false
         };
     },
 
@@ -71,7 +73,7 @@ export default {
         },
 
         ajaxGet(/* url */) {
-            return new Promise(resolve => {
+            return new Promise((resolve) => {
                 setTimeout(() => {
                     resolve(20);
                 }, 1000);

@@ -1,2 +1,5 @@
 1.better-scroll
 https://github.com/ustbhuangyi/better-scroll
+
+2.类似微信发布朋友圈 - 上传图片
+https://www.jianshu.com/p/a39f2c0d799e

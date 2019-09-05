@@ -1,7 +1,7 @@
 <template>
     <div class="star" :class="starType">
         <span v-for="(itemClass, index) in itemClasses" :key="index"
-              :class="itemClass" class="star-item"></span>
+              :class="itemClass" class="star-item" @click="starMarkChange"></span>
     </div>
 </template>
 
@@ -42,6 +42,13 @@
                     result.push(CLS_OFF);
                 }
                 return result;
+            }
+        },
+
+        methods: {
+            starMarkChange() {
+                console.log(222)
+                this.$emit('starMarkChangeName', 111);
             }
         }
     };

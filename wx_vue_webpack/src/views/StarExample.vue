@@ -2,7 +2,7 @@
     <div>
         <star :size="48" :score="4.6"></star>
 
-        <StarMall :score="2.5"></StarMall>
+        <StarMall :score="2.5" @starMarkChangeName="starMarkChange"></StarMall>
     </div>
 </template>
 
@@ -16,6 +16,12 @@ export default {
     components: {
         star,
         StarMall
+    },
+
+    methods: {
+        starMarkChange(val) {
+            console.log(val);
+        }
     }
 };
 </script>
