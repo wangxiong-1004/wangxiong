@@ -6,3 +6,10 @@ https://www.jianshu.com/p/a39f2c0d799e
 
 3.仿淘宝商品评价 - 星级评分，多图上传，文字评价
 https://github.com/dt8888/publicComment
+
+4.vue图片查看器
+https://www.cnblogs.com/jf-67/p/10304691.html
+https://www.jianshu.com/p/68f108a7a450
+https://blog.csdn.net/genius_yym/article/details/81196705
+
+
