@@ -1,0 +1,5 @@
+1.链接跳转不向浏览器提交历史记录
+window.location.replace('https://www.baidu.com');
+
+2.链接跳转
+window.location.href = 'https://www.baidu.com';
