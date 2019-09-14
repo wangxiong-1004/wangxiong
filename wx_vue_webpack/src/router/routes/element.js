@@ -1,7 +1,7 @@
 const element = [
     {
-        path: '/basic',
-        component: () => import(/* webpackChunkName: "element" */ '@/views/element_ui/Basic.vue')
+        path: '/button',
+        component: () => import(/* webpackChunkName: "element" */ '@/views/element_ui/Button.vue')
     }
 ];
 
