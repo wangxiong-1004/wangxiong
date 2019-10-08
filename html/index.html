@@ -3,7 +3,21 @@
 <head>
     <base href="https://www.dolabank.com/" target="_blank" />
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <meta name="author" content="wangxiong-1004@163.com" />
     <title>html元素</title>
+    <link rel="stylesheet" href="../style/index.css" type="text/css">
+    <style>
+        body {
+            margin: 0;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementsByTagName('a')[0].innerText = 'https://www.dolabank.com';
+        }
+    </script>
 </head>
 <body>
     <a href="index.php">index.php</a>
