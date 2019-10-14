@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">show and hide</div>
+    
+    <script>
+        /* use strict */
+        function show(e, type) {
+            if (type) {
+                e.style.display = 'none';
+            } else {
+                e.style.visibility = 'hidden';
+            }
+            console.log(arguments[0]);
+        }
+
+        show(document.getElementById('root'), true);
+
+        function factorial(n) {
+            if (n < 2) {
+                return 1;
+            }
+            return n * arguments.callee(n-1);
+        }
+        console.log(factorial(5));
+
+        function checkParams(args) {
+            var actual = args.length;
+            var expected = args.callee.length;
+
+            if (actual !== expected) {
+                throw Error('参数个数有误: 期望参数' + expected + '个，实际参数' + actual + '个');
+            }
+        }
+
+        function f(x, y, z) {
+            checkParams(arguments);
+
+            return x + y + z;
+        }
+
+        f(1);
+
+        if (window.XMLHttpRequest === undefined) {
+            window.XMLHttpRequest = function() {
+                try {
+                    return new ActiveXObject('Msml2.XMLHTTP.6.0');
+                }
+                catch(e1) {
+                    try {
+                        return new ActiveXObject('Msml2.XMLHTTP.3.0');
+                    } catch(e2) {
+                        throw new Error('XMLHttpRequest is not supported');
+                    }
+                }
+            }
+        } else {
+            var http = new XMLHttpRequest();
+console.log(http);
+            http.send();
+        }
+    </script>
+    <script src="./wx-cookie.js"></script>
+    <script>
+        console.log(wxCookies.getItem('name'));
+    </script>
+</body>
+</html>

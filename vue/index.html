@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <div>{{ msg }}</div>
+    <v-head :title="title" @send-child-params="get" v-model="value"></v-head>
+    {{ value }}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+  Vue.component('v-head', {
+    props: {
+      title: {
+        type: String,
+        default: ''
+      },
+      value: {
+        type: String,
+        default: ''
+      }
+    },
+    data: function() {
+      return {
+        head: 'header'
+      }
+    },
+    template: `<div>{{ head }} -- title: {{ title }}
+        <button @click="$emit('send-child-params', {par1: 2, par2: 'how old are you'})">sendParams</button>
+        <input type="text" :value="value" @input="$emit('input', $event.target.value)">
+    </div>`
+  })
+
+  var vm = new Vue({
+    el: '#app',
+    data: {
+      msg: 'message',
+      title: 'this is component',
+      value: ''
+    },
+    methods: {
+      get(event) {
+        console.log(event)
+      }
+    }
+  })
+</script>
+</body>
+</html>

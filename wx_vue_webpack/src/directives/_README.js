@@ -15,15 +15,21 @@
  * show-hide 指令名称
  */
 Vue.directive('show-hide', {
-    bind() {},
-    inserted() {},
-    update() {},
-    componentUpdated() {},
-    unbind() {}
+  bind() {
+  },
+  inserted() {
+  },
+  update() {
+  },
+  componentUpdated() {
+  },
+  unbind() {
+  }
 });
 
 // bind和update触发同行为，不管其他钩子写法
-Vue.directive('show-hide', () => {});
+Vue.directive('show-hide', () => {
+});
 
 
 /*
@@ -31,15 +37,20 @@ Vue.directive('show-hide', () => {});
  *
  */
 export default {
-    directives: {
-        'show-hide': {
-            bind() {},
-            inserted() {},
-            update() {},
-            componentUpdated() {},
-            unbind() {}
-        }
+  directives: {
+    'show-hide': {
+      bind() {
+      },
+      inserted() {
+      },
+      update() {
+      },
+      componentUpdated() {
+      },
+      unbind() {
+      }
     }
+  }
 };
 
 
@@ -47,41 +58,41 @@ export default {
  * 指令提取成文件写法
  */
 export default {
-    // 指令第一次绑定到元素时调用，做绑定的准备工作
-    // 比如添加事件监听器，或是其他只需要执行一次的复杂操作
-    bind(el, binding, vnode) {
-        console.log(el); // 指令所绑定的元素，可以用来直接操作 DOM
-        console.log(binding); // 一个对象，包含以下属性name，value，oldValue，expression，arg和modifiers
-        console.log(vnode); // Vue 编译生成的虚拟节点
-    },
-    // 被绑定标签的父节点加入 DOM 时立即触发
-    inserted(el, binding, vnode) {
-        console.log(el);
-        console.log(binding);
-        console.log(vnode);
-    },
-    // 根据获得的新值执行对应的更新
-    // 对于初始值也会调用一次
-    update(el, binding, vnode, oldVnode) {
-        console.log(el);
-        console.log(binding);
-        console.log(vnode);
-        console.log(oldVnode); // 上一个虚拟节点，仅在update和componentUpdated钩子函数中可用
-    },
-    // 指令所在组件的 VNode 及其子 VNode 全部更新后调用，一般使用 update
-    componentUpdated(el, binding, vnode, oldVnode) {
-        console.log(el);
-        console.log(binding);
-        console.log(vnode);
-        console.log(oldVnode);
-    },
-    // 做清理操作
-    // 比如移除bind时绑定的事件监听器
-    unbind(el, binding, vnode) {
-        console.log(el);
-        console.log(binding);
-        console.log(vnode);
-    }
+  // 指令第一次绑定到元素时调用，做绑定的准备工作
+  // 比如添加事件监听器，或是其他只需要执行一次的复杂操作
+  bind(el, binding, vnode) {
+    console.log(el); // 指令所绑定的元素，可以用来直接操作 DOM
+    console.log(binding); // 一个对象，包含以下属性name，value，oldValue，expression，arg和modifiers
+    console.log(vnode); // Vue 编译生成的虚拟节点
+  },
+  // 被绑定标签的父节点加入 DOM 时立即触发
+  inserted(el, binding, vnode) {
+    console.log(el);
+    console.log(binding);
+    console.log(vnode);
+  },
+  // 根据获得的新值执行对应的更新
+  // 对于初始值也会调用一次
+  update(el, binding, vnode, oldVnode) {
+    console.log(el);
+    console.log(binding);
+    console.log(vnode);
+    console.log(oldVnode); // 上一个虚拟节点，仅在update和componentUpdated钩子函数中可用
+  },
+  // 指令所在组件的 VNode 及其子 VNode 全部更新后调用，一般使用 update
+  componentUpdated(el, binding, vnode, oldVnode) {
+    console.log(el);
+    console.log(binding);
+    console.log(vnode);
+    console.log(oldVnode);
+  },
+  // 做清理操作
+  // 比如移除bind时绑定的事件监听器
+  unbind(el, binding, vnode) {
+    console.log(el);
+    console.log(binding);
+    console.log(vnode);
+  }
 };
 
 /*
