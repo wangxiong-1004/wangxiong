@@ -1,4 +1,7 @@
 .search-text {
+    display: flex;
+    border-radius: 50%;
     font-size: 30px;
     color: aqua;
+    transform: translate(50px);
 }
