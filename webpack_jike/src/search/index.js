@@ -3,8 +3,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.scss';
-import './font/iconfont.css';
-import i401 from './images/401.gif';
+import '../font/iconfont.css';
+import i401 from '../images/401.gif';
 
 class Search extends React.Component {
     render() {
