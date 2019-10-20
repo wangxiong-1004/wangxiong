@@ -43,12 +43,12 @@ const setMPA = () => {
 };
 
 const { entry, htmlWebpackPlugins } = setMPA();
-const devMode = process.env.NODE_ENV !== 'production';
+const devMode = process.env.NODE_ENV === 'production';
 
 module.exports = {
   entry,
   output: {
-    filename: devMode ? '[name].js' : '[name]_[chunkhash:8].js',
+    filename: devMode ? '[name]_[chunkhash:8].js' : '[name].js',
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
@@ -58,7 +58,7 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           'babel-loader',
-          // 'eslint-loader'
+          'eslint-loader',
         ],
       },
       {
@@ -136,8 +136,12 @@ module.exports = {
     new FriendlyErrorsWebpackPlugin(),
     function errorPlugin() {
       this.hooks.done.tap('done', (stats) => {
-        if (stats.compilation.errors && stats.compilation.errors.length && process.argv.indexOf('--watch') === -1) {
-          console.log('build error'); // eslint-disable-line
+        if (
+          stats.compilation.errors
+          && stats.compilation.errors.length
+          && process.argv.indexOf('--watch') === -1
+        ) {
+          console.log('build error') // eslint-disable-line
           process.exit(1);
         }
       });

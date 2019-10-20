@@ -40,11 +40,12 @@ const ssrConfig = {
   ],
   optimization: {
     splitChunks: {
+      minSize: 0,
       cacheGroups: {
         commons: {
-          test: /(react|react-dom)/,
-          name: 'vendors',
+          name: 'commons',
           chunks: 'all',
+          minChunks: 2,
         },
       },
     },

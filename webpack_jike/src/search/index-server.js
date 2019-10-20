@@ -1,9 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.scss'
-import '../font/iconfont.css'
-import i401 from '../images/401.gif'
-import { a } from './tree-shaking'
+// import React from 'react'
+// import './index.scss'
+// import '../font/iconfont.css'
+// import i401 from '../images/401.gif'
+// import { a } from './tree-shaking'
+
+const React = require('react')
+require('./index.scss')
+require('../font/iconfont.css')
+const i401 = require('../images/401.gif')
+const { a } = require('./tree-shaking')
 
 class Search extends React.Component {
   constructor() {
@@ -37,4 +42,4 @@ class Search extends React.Component {
   }
 }
 
-ReactDOM.render(<Search />, document.getElementById('root'))
+module.exports = <Search />

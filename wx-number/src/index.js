@@ -1,41 +1,41 @@
 export default function add(a, b) {
-    let i = a.length - 1;
-    let j = b.length - 1;
+  let i = a.length - 1,
+    j = b.length - 1,
+    carry = 0,
+    ret = ''
 
-    let carry = 0;
-    let ret = '';
-    while (i >= 0 || j >= 0) {
-        let x = 0;
-        let y = 0;
-        let sum;
+  while (i >= 0 || j >= 0) {
+    let x = 0,
+      y = 0,
+      sum
 
-        if (i >= 0) {
-            x = a[i] - '0';
-            i--;
-        }
-
-        if (j >= 0) {
-            y = b[j] - '0';
-            j--;
-        }
-
-        sum = x + y + carry;
-
-        if (sum >= 10) {
-            carry = 1;
-            sum -= 10;
-        } else {
-            carry = 0;
-        }
-
-        ret = sum + ret;
+    if (i >= 0) {
+      x = a[i] - '0'
+      i--
     }
 
-    if (carry) {
-        ret = carry + ret;
+    if (j >= 0) {
+      y = b[j] - '0'
+      j--
     }
 
-    return ret;
+    sum = x + y + carry
+
+    if (sum >= 10) {
+      carry = 1
+      sum -= 10
+    } else {
+      carry = 0
+    }
+
+    ret = sum + ret
+  }
+
+  if (carry) {
+    ret = carry + ret
+  }
+
+  return ret
 }
 
 // add('999', '1');

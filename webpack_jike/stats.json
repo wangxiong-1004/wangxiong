@@ -1,0 +1,226 @@
+ DONE  Compiled successfully in 87525ms9:34:05 PM
+
+{
+  "errors": [],
+  "warnings": [],
+  "modules": [
+    {
+      "id": 0,
+      "identifier": "external \"React\"",
+      "name": "external \"React\"",
+      "index": 3,
+      "index2": 2,
+      "size": 42,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": "E:\\wangxiong1004\\wangxiong\\webpack_jike\\node_modules\\babel-loader\\lib\\index.js!E:\\wangxiong1004\\wangxiong\\webpack_jike\\src\\search\\index.js",
+      "issuerId": null,
+      "issuerName": "./src/search/index.js",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "E:\\wangxiong1004\\wangxiong\\webpack_jike\\node_modules\\babel-loader\\lib\\index.js!E:\\wangxiong1004\\wangxiong\\webpack_jike\\src\\search\\index.js",
+          "name": "./src/search/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 1,
+      "identifier": "external \"ReactDOM\"",
+      "name": "external \"ReactDOM\"",
+      "index": 4,
+      "index2": 3,
+      "size": 42,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": "E:\\wangxiong1004\\wangxiong\\webpack_jike\\node_modules\\babel-loader\\lib\\index.js!E:\\wangxiong1004\\wangxiong\\webpack_jike\\src\\search\\index.js",
+      "issuerId": null,
+      "issuerName": "./src/search/index.js",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "E:\\wangxiong1004\\wangxiong\\webpack_jike\\node_modules\\babel-loader\\lib\\index.js!E:\\wangxiong1004\\wangxiong\\webpack_jike\\src\\search\\index.js",
+          "name": "./src/search/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 2,
+      "identifier": "E:\\wangxiong1004\\wangxiong\\webpack_jike\\node_modules\\url-loader\\dist\\cjs.js??ref--7-0!E:\\wangxiong1004\\wangxiong\\webpack_jike\\src\\images\\401.gif",
+      "name": "./src/images/401.gif",
+      "index": 9,
+      "index2": 8,
+      "size": 69,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": "E:\\wangxiong1004\\wangxiong\\webpack_jike\\node_modules\\babel-loader\\lib\\index.js!E:\\wangxiong1004\\wangxiong\\webpack_jike\\src\\search\\index.js",
+      "issuerId": null,
+      "issuerName": "./src/search/index.js",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "E:\\wangxiong1004\\wangxiong\\webpack_jike\\node_modules\\babel-loader\\lib\\index.js!E:\\wangxiong1004\\wangxiong\\webpack_jike\\src\\search\\index.js",
+          "name": "./src/search/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 3,
+      "identifier": "E:\\wangxiong1004\\wangxiong\\webpack_jike\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!E:\\wangxiong1004\\wangxiong\\webpack_jike\\node_modules\\css-loader\\dist\\cjs.js!E:\\wangxiong1004\\wangxiong\\webpack_jike\\node_modules\\sass-loader\\dist\\cjs.js!E:\\wangxiong1004\\wangxiong\\webpack_jike\\node_modules\\postcss-loader\\src\\index.js??ref--6-3!E:\\wangxiong1004\\wangxiong\\webpack_jike\\node_modules\\px2rem-loader\\index.js??ref--6-4!E:\\wangxiong1004\\wangxiong\\webpack_jike\\src\\search\\index.scss",
+      "name": "./src/search/index.scss",
+      "index": 5,
+      "index2": 5,
+      "size": 39,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": "E:\\wangxiong1004\\wangxiong\\webpack_jike\\node_modules\\babel-loader\\lib\\index.js!E:\\wangxiong1004\\wangxiong\\webpack_jike\\src\\search\\index.js",
+      "issuerId": null,
+      "issuerName": "./src/search/index.js",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "E:\\wangxiong1004\\wangxiong\\webpack_jike\\node_modules\\babel-loader\\lib\\index.js!E:\\wangxiong1004\\wangxiong\\webpack_jike\\src\\search\\index.js",
+          "name": "./src/search/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 4,
+      "identifier": "E:\\wangxiong1004\\wangxiong\\webpack_jike\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!E:\\wangxiong1004\\wangxiong\\webpack_jike\\node_modules\\css-loader\\dist\\cjs.js!E:\\wangxiong1004\\wangxiong\\webpack_jike\\src\\font\\iconfont.css",
+      "name": "./src/font/iconfont.css",
+      "index": 7,
+      "index2": 7,
+      "size": 39,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": "E:\\wangxiong1004\\wangxiong\\webpack_jike\\node_modules\\babel-loader\\lib\\index.js!E:\\wangxiong1004\\wangxiong\\webpack_jike\\src\\search\\index.js",
+      "issuerId": null,
+      "issuerName": "./src/search/index.js",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "E:\\wangxiong1004\\wangxiong\\webpack_jike\\node_modules\\babel-loader\\lib\\index.js!E:\\wangxiong1004\\wangxiong\\webpack_jike\\src\\search\\index.js",
+          "name": "./src/search/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 5,
+      "identifier": "E:\\wangxiong1004\\wangxiong\\webpack_jike\\node_modules\\babel-loader\\lib\\index.js!E:\\wangxiong1004\\wangxiong\\webpack_jike\\src\\index\\index.js e94c08805b96753a3f9f9df473f86b0c",
+      "name": "./src/index/index.js + 1 modules",
+      "index": 0,
+      "index2": 1,
+      "size": 296,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 6,
+      "identifier": "E:\\wangxiong1004\\wangxiong\\webpack_jike\\node_modules\\babel-loader\\lib\\index.js!E:\\wangxiong1004\\wangxiong\\webpack_jike\\src\\search\\index.js c28a10d8f8fd0477df6a60bdbc3c0945",
+      "name": "./src/search/index.js + 1 modules",
+      "index": 2,
+      "index2": 10,
+      "size": 3651,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 7,
+      "identifier": "E:\\wangxiong1004\\wangxiong\\webpack_jike\\node_modules\\babel-loader\\lib\\index.js!E:\\wangxiong1004\\wangxiong\\webpack_jike\\src\\search\\test.js",
+      "name": "./src/search/test.js",
+      "index": 11,
+      "index2": 11,
+      "size": 126,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        2
+      ],
+      "issuer": "E:\\wangxiong1004\\wangxiong\\webpack_jike\\node_modules\\babel-loader\\lib\\index.js!E:\\wangxiong1004\\wangxiong\\webpack_jike\\src\\search\\index.js",
+      "issuerId": null,
+      "issuerName": "./src/search/index.js",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "E:\\wangxiong1004\\wangxiong\\webpack_jike\\node_modules\\babel-loader\\lib\\index.js!E:\\wangxiong1004\\wangxiong\\webpack_jike\\src\\search\\index.js",
+          "name": "./src/search/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "filteredModules": 2,
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 5,
+      "debug": false
+    }
+  }
+}

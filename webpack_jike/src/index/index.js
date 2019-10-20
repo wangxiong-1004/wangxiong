@@ -1,4 +1,9 @@
-document.write('index page');
+import { common } from '../../common/index'
 
-['width', 'height', 'background'].map(item => item === 'height');
+document.write('index page')
 
+const arr = ['width', 'height', 'background']
+arr.map((item) => item === 'height')
+
+// eslint-disable-next-line
+console.log(common() + ' success')
