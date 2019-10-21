@@ -1,6 +1,7 @@
 const glob = require('glob')
 const path = require('path')
 const webpack = require('webpack')
+const PurgecssPlugin = require('purgecss-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -9,6 +10,11 @@ const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin')
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const TerserWebpackPlugin = require('terser-webpack-plugin')
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
+
+const PATHS = {
+  src: path.join(__dirname, 'src')
+}
 
 const setMPA = () => {
   const entry = {}
@@ -71,7 +77,7 @@ module.exports = {
               workers: 3
             }
           },
-          'babel-loader'
+          'babel-loader?cacheDirectory=true'
           // "eslint-loader"
         ]
       },
@@ -136,6 +142,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'style/[name]_[contenthash:8].css'
     }),
+    new PurgecssPlugin({
+      paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true })
+    }),
     new OptimizeCssAssetsWebpackPlugin({
       assetNameRegExp: /\.css$/g,
       cssProcessor: require('cssnano')
@@ -157,7 +166,8 @@ module.exports = {
     new FriendlyErrorsWebpackPlugin(),
     new webpack.DllReferencePlugin({
       manifest: require('./build/library/library.json')
-    })
+    }),
+    new HardSourceWebpackPlugin()
   ].concat(htmlWebpackPlugins),
 
   optimization: {
@@ -173,9 +183,25 @@ module.exports = {
     },
     minimizer: [
       new TerserWebpackPlugin({
-        parallel: 4
+        parallel: 4,
+        cache: true
       })
     ]
+  },
+
+  resolve: {
+    alias: {
+      react: path.resolve(
+        __dirname,
+        './node_modules/react/umd/react.production.min.js'
+      ),
+      'react-dom': path.resolve(
+        __dirname,
+        './node_modules/react-dom/umd/react-dom.production.min.js'
+      )
+    },
+    extensions: ['.js'],
+    mainFields: ['main']
   },
 
   stats: 'errors-only'
