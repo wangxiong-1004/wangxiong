@@ -7,6 +7,7 @@ body, html {
 
 .clearfix {
     display: inline-block;
+
     &:after {
         content: '.';
         height: 0;
@@ -22,7 +23,7 @@ body, html {
     .border-1px {
         &::after {
             -webkit-transform: scaleY(0.7);
-                    transform: scaleY(0.7);
+            transform: scaleY(0.7);
         }
     }
 }
@@ -31,7 +32,7 @@ body, html {
     .border-1px {
         &::after {
             -webkit-transform: scaleY(0.5);
-                    transform: scaleY(0.5);
+            transform: scaleY(0.5);
         }
     }
 }
@@ -40,7 +41,7 @@ body, html {
     .border-1px {
         &::after {
             -webkit-transform: scaleY(0.3);
-                    transform: scaleY(0.3);
+            transform: scaleY(0.3);
         }
     }
 }

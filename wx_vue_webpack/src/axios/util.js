@@ -1,4 +1,4 @@
-let needLoadingRequestCount = 0;
+let needLoadingRequestCount = 0
 
 /**
  * 开启加载loading
@@ -7,10 +7,10 @@ let needLoadingRequestCount = 0;
  * @returns { * }
  */
 function startLoading() {
-    // Indicator.open({
-    //     text: loadingText || '拼命加载...',
-    //     spinnerType: 'triple-bounce'
-    // });
+  // Indicator.open({
+  //     text: loadingText || '拼命加载...',
+  //     spinnerType: 'triple-bounce'
+  // });
 }
 
 /**
@@ -19,38 +19,38 @@ function startLoading() {
  * @returns { * }
  */
 function endLoading() {
-    // Indicator.close();
+  // Indicator.close();
 }
 
 export default {
-    /**
-     * 显示全屏loading动画
-     * @method showFullScreenLoading
-     * @param { String } loadingText loading显示文字
-     * @returns { * }
-     */
-    showFullScreenLoading(loadingText) {
-        if (needLoadingRequestCount === 0) {
-            startLoading(loadingText);
-        }
-
-        needLoadingRequestCount += 1;
-    },
-    /**
-     * 关闭全屏loading动画
-     * @method tryHideFullScreenLoading
-     * @returns { * }
-     */
-    tryHideFullScreenLoading() {
-        if (needLoadingRequestCount <= 0) {
-            return;
-        }
-
-        needLoadingRequestCount -= 1;
-
-        if (needLoadingRequestCount === 0) {
-            endLoading();
-            // _.debounce(tryCloseLoading, 300)()
-        }
+  /**
+   * 显示全屏loading动画
+   * @method showFullScreenLoading
+   * @param { String } loadingText loading显示文字
+   * @returns { * }
+   */
+  showFullScreenLoading(loadingText) {
+    if (needLoadingRequestCount === 0) {
+      startLoading(loadingText)
     }
-};
+
+    needLoadingRequestCount += 1
+  },
+  /**
+   * 关闭全屏loading动画
+   * @method tryHideFullScreenLoading
+   * @returns { * }
+   */
+  tryHideFullScreenLoading() {
+    if (needLoadingRequestCount <= 0) {
+      return
+    }
+
+    needLoadingRequestCount -= 1
+
+    if (needLoadingRequestCount === 0) {
+      endLoading()
+      // _.debounce(tryCloseLoading, 300)()
+    }
+  }
+}

@@ -1,13 +1,13 @@
-const devMode = process.env.NODE_ENV !== 'production';
-let baseURL;
+const devMode = process.env.NODE_ENV !== 'production'
+let baseURL
 
 if (devMode) {
-    baseURL = 'https://www.dolabank/club';
+  baseURL = 'https://www.dolabank/club'
 } else {
-    baseURL = 'https://www.dolabank.com/apigateway';
+  baseURL = 'https://www.dolabank.com/apigateway'
 }
 
 export default {
-    BASE_URL: baseURL,
-    TIMEOUT: 2500
-};
+  BASE_URL: baseURL,
+  TIMEOUT: 2500
+}

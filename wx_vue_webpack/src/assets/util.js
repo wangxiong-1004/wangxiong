@@ -9,12 +9,12 @@ export default {
    * splitArrToMultivariateArr(2, arr) => [[1, 2], [3, 4], [5, 6], [7]]
    */
   splitArrToMultivariateArr(num, arr) {
-    const MultivariateArr = [];
+    const multivariateArr = []
 
     for (let i = 0; i < arr.length;) {
-      MultivariateArr.push(arr.slice(i, i += num));
+      multivariateArr.push(arr.slice(i, i += num))
     }
 
-    return MultivariateArr;
+    return multivariateArr
   }
-};
+}
