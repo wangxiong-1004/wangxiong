@@ -21,8 +21,8 @@
 
 <script>
 export default {
-  name: "Css"
-};
+  name: 'Css'
+}
 </script>
 
 <style scoped lang="scss">

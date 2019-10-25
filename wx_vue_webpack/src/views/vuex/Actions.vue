@@ -1,40 +1,40 @@
 <template>
-    <div></div>
+  <div></div>
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions } from 'vuex'
 
 export default {
-    name: 'Actions',
+  name: 'Actions',
 
-    methods: {
-        ...mapActions([
-            'decrement'
-        ]),
+  methods: {
+    ...mapActions([
+      'decrement'
+    ]),
 
-        // 模块
-        ...mapActions('logs', {
-            aliasIncrement: 'incrementSync'
-        }),
+    // 模块
+    ...mapActions('logs', {
+      aliasIncrement: 'incrementSync'
+    }),
 
-        increment() {
-            this.$store.dispatch('increment', 2);
-        },
-
-        setIncrement() {
-            this.$store.dispatch('logs/setIncrement');
-        }
+    increment() {
+      this.$store.dispatch('increment', 2)
     },
 
-    created() {
-        this.decrement({
-            count: 10
-        });
-
-        this.aliasIncrement();
+    setIncrement() {
+      this.$store.dispatch('logs/setIncrement')
     }
-};
+  },
+
+  created() {
+    this.decrement({
+      count: 10
+    })
+
+    this.aliasIncrement()
+  }
+}
 </script>
 
 <style scoped>

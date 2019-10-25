@@ -24,21 +24,21 @@
 </template>
 
 <script>
-import BScroll from "better-scroll";
+import BScroll from 'better-scroll'
 // import BScroll from '@better-scroll/core';
 // import Pullup from '@better-scroll/pull-up'
 
 // BScroll.use(Pullup);
 
 export default {
-  name: "PullUp",
+  name: 'PullUp',
 
   data() {
     return {
       isPullUpLoad: false,
       data: 30,
       isDone: false
-    };
+    }
   },
 
   components: {},
@@ -48,50 +48,50 @@ export default {
       this.bscroll = new BScroll(this.$refs.scroller, {
         scrollY: true,
         pullUpLoad: true
-      });
+      })
 
-      this.bscroll.on("pullingUp", this.pullingUpHandler);
+      this.bscroll.on('pullingUp', this.pullingUpHandler)
     },
 
     async pullingUpHandler() {
-      this.isPullUpLoad = true;
+      this.isPullUpLoad = true
 
-      await this.requestData();
+      await this.requestData()
 
-      this.bscroll.finishPullUp();
-      this.bscroll.refresh();
-      this.isPullUpLoad = false;
+      this.bscroll.finishPullUp()
+      this.bscroll.refresh()
+      this.isPullUpLoad = false
     },
 
     async requestData() {
       try {
-        const newData = await this.ajaxGet(/* url */);
-        this.data += newData;
+        const newData = await this.ajaxGet(/* url */)
+        this.data += newData
       } catch (err) {
         // handle err
-        console.log(err);
+        console.log(err)
       }
     },
 
     ajaxGet(/* url */) {
-      return new Promise(resolve => {
+      return new Promise((resolve) => {
         setTimeout(() => {
-          resolve(20);
-        }, 1000);
-      });
+          resolve(20)
+        }, 1000)
+      })
     }
   },
 
   created() {
-    this.bscroll = null;
+    this.bscroll = null
   },
 
   mounted() {
     this.$nextTick(() => {
-      this.initScroll();
-    });
+      this.initScroll()
+    })
   }
-};
+}
 </script>
 
 <style scoped lang="scss">

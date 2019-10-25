@@ -18,25 +18,25 @@
 
 <script>
 // @ is an alias to /src
-import { mapState, createNamespacedHelpers } from "vuex";
-import logoImage from "@assets/logo.png";
-import HelloWorld from "@/components/HelloWorld.vue";
+import { mapState, createNamespacedHelpers } from 'vuex'
+import logoImage from '@assets/logo.png'
+import HelloWorld from '@/components/HelloWorld.vue'
 
-const { mapState: logState } = createNamespacedHelpers("logs");
+const { mapState: logState } = createNamespacedHelpers('logs')
 
 export default {
-  name: "home",
+  name: 'home',
 
   computed: {
-    ...mapState("logs", ["log"]),
-    ...logState(["log"]),
+    ...mapState('logs', ['log']),
+    ...logState(['log']),
     userName: {
       get() {
-        return this.$store.state.user.user_name;
+        return this.$store.state.user.user_name
       },
 
       set(value) {
-        this.$store.commit("updateMessage", value);
+        this.$store.commit('updateMessage', value)
       }
     }
   },
@@ -44,21 +44,21 @@ export default {
   data() {
     return {
       logoImage
-    };
+    }
   },
 
   created() {
-    this.$store.commit("logs/getLogs");
+    this.$store.commit('logs/getLogs')
   },
 
   methods: {
     setLogs() {
-      this.$store.commit("logs/setLogs");
+      this.$store.commit('logs/setLogs')
     }
   },
 
   components: {
     HelloWorld
   }
-};
+}
 </script>
